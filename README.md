@@ -11,3 +11,4 @@ This is the list of questions that I have done on Kattis, based on CS2040C list 
 |  Cinema Crowds 2  |         1.8         |   C++    | AY2021 S1 |     https://open.kattis.com/problems/cinema2     |
 |        ABC        |         1.9         |   C++    | AY2021 S1 |       https://open.kattis.com/problems/abc       |
 |   Climbing Worm   |         2.2         |   C++    | AY2021 S1 |  https://open.kattis.com/problems/climbingworm   |
+|  Laptop Stickers  |         3.3         |   C++    | AY2223 S1 | https://open.kattis.com/problems/laptopstickers  |
