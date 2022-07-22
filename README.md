@@ -13,7 +13,8 @@ This is the list of questions that I have done on Kattis, based on CS2040C list 
 |  Missing Numbers   |         1.7         |   C++    |  PS0   |  https://open.kattis.com/problems/missingnumbers   |
 |  Cinema Crowds 2   |         1.8         |   C++    |  PS0   |      https://open.kattis.com/problems/cinema2      |
 |        ABC         |         1.9         |   C++    |  PS0   |        https://open.kattis.com/problems/abc        |
-| Social Distancing  |          2          |   C++    |  PS0   | https://open.kattis.com/problems/socialdistancing2 |
+| Social Distancing  |         2.0         |   C++    |  PS0   | https://open.kattis.com/problems/socialdistancing2 |
 |   Climbing Worm    |         2.2         |   C++    |  PS0   |   https://open.kattis.com/problems/climbingworm    |
 |   Liquid Assets    |         2.8         |   C++    |  PS0   |   https://open.kattis.com/problems/liquidassets    |
 |  Laptop Stickers   |         3.3         |   C++    |  PS0   |  https://open.kattis.com/problems/laptopstickers   |
+| Working From Home  |         4.1         |   C++    |  PS0   |  https://open.kattis.com/problems/workingfromhome  |
