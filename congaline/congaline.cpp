@@ -99,7 +99,6 @@ class Queue {
         }
 
         Node* instruction_c(Node* mic) {
-            
             Node* to_be_returned = (mic == tail) ? head : mic->next;
             Node* partner = mic->partner_position;
             Node* after_partner = partner->next;
@@ -115,8 +114,8 @@ class Queue {
             
             // SCENARIO 2B: If the partner is all the way at the back
             if (partner->next == nullptr) {
-                mic->prev->next = mic->next;
-                mic->next->prev = mic->prev;
+                if (mic->prev != nullptr) mic->prev->next = mic->next;
+                if (mic->next != nullptr) mic->next->prev = mic->prev;
                 mic->next = nullptr;
                 partner->next = mic; 
                 mic->prev = partner;
