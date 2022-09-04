@@ -2,7 +2,7 @@
 // Difficulty: 1.3
 // Time Limit: 1 second, Memory Limit: 1024 MB
 // Acceptance: 96%
-// CPU Time: 0.09 s
+// CPU Time: 0.10 s
 // Author: Edbert Geraldy Cangdinata
 // Source: NUS Competitive Programming
 // Link: https://open.kattis.com/problems/congaline
@@ -147,7 +147,7 @@ int main() {
         else if (letter == 'B') mic = q.back(mic);
         else if (letter == 'F') mic = q.front(mic);
         else if (letter == 'R') mic = q.instruction_r(mic);
-        // else if (letter == 'C') mic = q.instruction_c(mic);
+        else if (letter == 'C') mic = q.instruction_c(mic);
     }
     q.traverse();
 }
