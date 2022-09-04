@@ -124,10 +124,13 @@ class Queue {
                 return to_be_returned;
             }
 
-            mic->prev = partner; 
-            mic->next = after_partner;
+            mic->prev->next = mic->next;
+            mic->next->prev = mic->prev;
             partner->next = mic;
-            after_partner->prev = mic; 
+            mic->next = after_partner;
+            after_partner->prev = mic;
+            mic->prev = partner;
+            mic->partner_position->partner_position = mic;
             return to_be_returned;
         }
 };
