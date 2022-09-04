@@ -2,7 +2,7 @@
 // Difficulty: 1.3
 // Time Limit: 1 second, Memory Limit: 1024 MB
 // Acceptance: 96%
-// CPU Time: > 1.00 s
+// CPU Time: 0.09 s
 // Author: Edbert Geraldy Cangdinata
 // Source: NUS Competitive Programming
 // Link: https://open.kattis.com/problems/congaline
@@ -25,28 +25,26 @@ class Queue {
         Node* tail = NULL;
     public:
         void push_to_back(string a, string b) {
-            Node* ptr = head;
             Node* new_node1 = new Node;
             new_node1->me = a;
             new_node1->partner = b;
-            new_node1->next = NULL;
-            new_node1->partner_position = NULL;
-            if (head == NULL) {
-                new_node1->prev = NULL;
-                head = new_node1;
-            } else {
-                while (ptr && ptr->next != NULL) ptr = ptr->next;
-                ptr->next = new_node1;
-                new_node1->prev = ptr;
+            new_node1->next = nullptr; new_node1->prev = nullptr; new_node1->partner_position = nullptr;
+
+            // If the head is NULL, 
+            if (head == nullptr) head = new_node1;
+            else {
+                tail->next = new_node1;
+                new_node1->prev = tail;
+                tail = new_node1;
             }
+
+            // DECLARING A VARIABLE FOR NODE 2
             Node* new_node2 = new Node;
             new_node2->me = b;
             new_node2->partner = a;
-            new_node2->partner_position = new_node1;
-            new_node1->partner_position = new_node2;
-            new_node2->next = NULL;
-            new_node1->next = new_node2;
-            new_node2->prev = new_node1;
+            new_node2->next = nullptr; new_node2->prev = new_node1; new_node2->partner_position = new_node1;
+
+            new_node1->partner_position = new_node2; new_node1->next = new_node2;
             tail = new_node2;
         }
 
