@@ -99,6 +99,7 @@ class Queue {
         }
 
         Node* instruction_c(Node* mic) {
+            
             Node* to_be_returned = (mic == tail) ? head : mic->next;
             Node* partner = mic->partner_position;
             Node* after_partner = partner->next;
@@ -107,7 +108,7 @@ class Queue {
             if (mic->prev == mic->partner_position) return to_be_returned;
 
             // SCENARIO 2A: If the person holding the mic is at the front, change the head
-            if (mic == head) {
+            if (mic == head) {            
                 head = mic->next; 
                 head->prev = nullptr;   
             } 
@@ -121,14 +122,14 @@ class Queue {
                 mic->prev = partner;
                 tail = mic;
                 partner->partner_position = mic;
+                
                 return to_be_returned;
             }
-
-            mic->prev->next = mic->next;
-            mic->next->prev = mic->prev;
+            if (mic->prev != nullptr) mic->prev->next = mic->next;
+            if (mic->next != nullptr) mic->next->prev = mic->prev;
             partner->next = mic;
             mic->next = after_partner;
-            after_partner->prev = mic;
+            if (after_partner != nullptr) after_partner->prev = mic;
             mic->prev = partner;
             mic->partner_position->partner_position = mic;
             return to_be_returned;
