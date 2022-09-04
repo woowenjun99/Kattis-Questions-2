@@ -146,7 +146,7 @@ int main() {
         if (letter == 'P') q.P(mic);
         else if (letter == 'B') mic = q.back(mic);
         else if (letter == 'F') mic = q.front(mic);
-        // else if (letter == 'R') mic = q.instruction_r(mic);
+        else if (letter == 'R') mic = q.instruction_r(mic);
         // else if (letter == 'C') mic = q.instruction_c(mic);
     }
     q.traverse();
