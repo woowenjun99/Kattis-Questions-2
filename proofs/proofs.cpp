@@ -14,8 +14,7 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false); cin.tie(0);
     unordered_set<string> s;
-    int x, counter = 1; cin >> x; cin.ignore();
-
+    int x, counter = 1; cin >> x;
     while (x--) {
         string y; cin >> y;
         while (y != "->") {
