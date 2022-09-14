@@ -2,7 +2,7 @@
 // Difficulty: 2.4
 // Time Limit: 3 seconds, Memory Limit: 1024 MB
 // Acceptance: 54%
-// CPU Time: 0.44 s
+// CPU Time: 0.29 s
 // Author: Joseph Swernofsky
 // Source: KTH Challenge 2020
 // Link: https://open.kattis.com/problems/proofs
@@ -12,6 +12,7 @@
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false); cin.tie(0);
     unordered_set<string> s;
     int x, counter = 1; cin >> x; cin.ignore();
 
