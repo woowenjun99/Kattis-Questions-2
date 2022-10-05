@@ -13,7 +13,11 @@
 using namespace std;
 
 bool isPrime(long long x) {
-    for (long long i = 2; i <= sqrt(x); ++i) {
+    if (x != 2 && x % 2 == 0) {
+        return false;
+    }
+    
+    for (long long i = 3; i <= sqrt(x); i += 2) {
         if (x % i == 0) return false;
     }
     return true;
